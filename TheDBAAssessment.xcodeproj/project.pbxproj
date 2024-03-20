@@ -9,13 +9,31 @@
 /* Begin PBXBuildFile section */
 		CE8E34272BAB76800047EE0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34262BAB76800047EE0A /* AppDelegate.swift */; };
 		CE8E34292BAB76800047EE0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34282BAB76800047EE0A /* SceneDelegate.swift */; };
-		CE8E342B2BAB76800047EE0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E342A2BAB76800047EE0A /* ViewController.swift */; };
-		CE8E342E2BAB76800047EE0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8E342C2BAB76800047EE0A /* Main.storyboard */; };
 		CE8E34302BAB76830047EE0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8E342F2BAB76830047EE0A /* Assets.xcassets */; };
 		CE8E34332BAB76830047EE0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8E34312BAB76830047EE0A /* LaunchScreen.storyboard */; };
 		CE8E343E2BAB76840047EE0A /* TheDBAAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E343D2BAB76840047EE0A /* TheDBAAssessmentTests.swift */; };
 		CE8E34482BAB76840047EE0A /* TheDBAAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34472BAB76840047EE0A /* TheDBAAssessmentUITests.swift */; };
 		CE8E344A2BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34492BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift */; };
+		CE8E345B2BAB7A710047EE0A /* EndpointConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E345A2BAB7A710047EE0A /* EndpointConvertible.swift */; };
+		CE8E345D2BAB7ABF0047EE0A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E345C2BAB7ABF0047EE0A /* HTTPMethod.swift */; };
+		CE8E345F2BAB7B1E0047EE0A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E345E2BAB7B1E0047EE0A /* NetworkError.swift */; };
+		CE8E34632BAB7D310047EE0A /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34622BAB7D310047EE0A /* URLRequest+Extensions.swift */; };
+		CE8E34652BAB7D6C0047EE0A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34642BAB7D6C0047EE0A /* Network.swift */; };
+		CE8E34672BAB7DBA0047EE0A /* HttpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34662BAB7DBA0047EE0A /* HttpStatus.swift */; };
+		CE8E346B2BAB7E3D0047EE0A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E346A2BAB7E3D0047EE0A /* Logger.swift */; };
+		CE8E346D2BAB7E560047EE0A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E346C2BAB7E560047EE0A /* NetworkLogger.swift */; };
+		CE8E34712BAB7EDB0047EE0A /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34702BAB7EDB0047EE0A /* Data+Extensions.swift */; };
+		CE8E34762BAB83340047EE0A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34752BAB83340047EE0A /* Coordinator.swift */; };
+		CE8E34782BAB835D0047EE0A /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34772BAB835D0047EE0A /* HomeCoordinator.swift */; };
+		CE8E347F2BAB85F60047EE0A /* RecipeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E347E2BAB85F60047EE0A /* RecipeEndpoint.swift */; };
+		CE8E34832BAB88110047EE0A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34822BAB88110047EE0A /* Recipe.swift */; };
+		CE8E34882BAB89820047EE0A /* RecipeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34872BAB89820047EE0A /* RecipeRepositoryProtocol.swift */; };
+		CE8E348A2BAB89D20047EE0A /* GetRecipesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34892BAB89D20047EE0A /* GetRecipesUseCase.swift */; };
+		CE8E348C2BAB8B490047EE0A /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E348B2BAB8B490047EE0A /* RecipeRepository.swift */; };
+		CE8E348F2BAB8C600047EE0A /* RecipeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E348E2BAB8C600047EE0A /* RecipeEntity.swift */; };
+		CE8E34922BAB8E5D0047EE0A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34912BAB8E5D0047EE0A /* HomeViewController.swift */; };
+		CE8E34942BAB8F8E0047EE0A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34932BAB8F8E0047EE0A /* HomeViewModel.swift */; };
+		CE8E34962BAB908A0047EE0A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34952BAB908A0047EE0A /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +57,6 @@
 		CE8E34232BAB76800047EE0A /* TheDBAAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDBAAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8E34262BAB76800047EE0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8E34282BAB76800047EE0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE8E342A2BAB76800047EE0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE8E342D2BAB76800047EE0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE8E342F2BAB76830047EE0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8E34322BAB76830047EE0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8E34342BAB76830047EE0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +65,26 @@
 		CE8E34432BAB76840047EE0A /* TheDBAAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDBAAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8E34472BAB76840047EE0A /* TheDBAAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDBAAssessmentUITests.swift; sourceTree = "<group>"; };
 		CE8E34492BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDBAAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE8E345A2BAB7A710047EE0A /* EndpointConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointConvertible.swift; sourceTree = "<group>"; };
+		CE8E345C2BAB7ABF0047EE0A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CE8E345E2BAB7B1E0047EE0A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CE8E34622BAB7D310047EE0A /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		CE8E34642BAB7D6C0047EE0A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CE8E34662BAB7DBA0047EE0A /* HttpStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpStatus.swift; sourceTree = "<group>"; };
+		CE8E346A2BAB7E3D0047EE0A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		CE8E346C2BAB7E560047EE0A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		CE8E34702BAB7EDB0047EE0A /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		CE8E34752BAB83340047EE0A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE8E34772BAB835D0047EE0A /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		CE8E347E2BAB85F60047EE0A /* RecipeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEndpoint.swift; sourceTree = "<group>"; };
+		CE8E34822BAB88110047EE0A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CE8E34872BAB89820047EE0A /* RecipeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		CE8E34892BAB89D20047EE0A /* GetRecipesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecipesUseCase.swift; sourceTree = "<group>"; };
+		CE8E348B2BAB8B490047EE0A /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
+		CE8E348E2BAB8C600047EE0A /* RecipeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEntity.swift; sourceTree = "<group>"; };
+		CE8E34912BAB8E5D0047EE0A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE8E34932BAB8F8E0047EE0A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CE8E34952BAB908A0047EE0A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +135,13 @@
 		CE8E34252BAB76800047EE0A /* TheDBAAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				CE8E34262BAB76800047EE0A /* AppDelegate.swift */,
-				CE8E34282BAB76800047EE0A /* SceneDelegate.swift */,
-				CE8E342A2BAB76800047EE0A /* ViewController.swift */,
-				CE8E342C2BAB76800047EE0A /* Main.storyboard */,
-				CE8E342F2BAB76830047EE0A /* Assets.xcassets */,
-				CE8E34312BAB76830047EE0A /* LaunchScreen.storyboard */,
 				CE8E34342BAB76830047EE0A /* Info.plist */,
+				CE8E34562BAB79690047EE0A /* App */,
+				CE8E346E2BAB7E6B0047EE0A /* Common */,
+				CE8E34742BAB82FB0047EE0A /* Coordinators */,
+				CE8E34572BAB79CE0047EE0A /* Data */,
+				CE8E34732BAB82BD0047EE0A /* Domain */,
+				CE8E34722BAB829C0047EE0A /* Presentation */,
 			);
 			path = TheDBAAssessment;
 			sourceTree = "<group>";
@@ -125,6 +161,168 @@
 				CE8E34492BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift */,
 			);
 			path = TheDBAAssessmentUITests;
+			sourceTree = "<group>";
+		};
+		CE8E34562BAB79690047EE0A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34262BAB76800047EE0A /* AppDelegate.swift */,
+				CE8E34282BAB76800047EE0A /* SceneDelegate.swift */,
+				CE8E34952BAB908A0047EE0A /* Environment.swift */,
+				CE8E34312BAB76830047EE0A /* LaunchScreen.storyboard */,
+				CE8E342F2BAB76830047EE0A /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CE8E34572BAB79CE0047EE0A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E347A2BAB843F0047EE0A /* Local */,
+				CE8E34582BAB79DB0047EE0A /* Remote */,
+				CE8E347B2BAB84720047EE0A /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CE8E34582BAB79DB0047EE0A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34592BAB7A1B0047EE0A /* Configs+Helpers */,
+				CE8E347C2BAB849E0047EE0A /* Endpoints */,
+				CE8E348D2BAB8C350047EE0A /* Models */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		CE8E34592BAB7A1B0047EE0A /* Configs+Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E345A2BAB7A710047EE0A /* EndpointConvertible.swift */,
+				CE8E345C2BAB7ABF0047EE0A /* HTTPMethod.swift */,
+				CE8E346C2BAB7E560047EE0A /* NetworkLogger.swift */,
+				CE8E34662BAB7DBA0047EE0A /* HttpStatus.swift */,
+				CE8E345E2BAB7B1E0047EE0A /* NetworkError.swift */,
+				CE8E34642BAB7D6C0047EE0A /* Network.swift */,
+			);
+			path = "Configs+Helpers";
+			sourceTree = "<group>";
+		};
+		CE8E34682BAB7E050047EE0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34622BAB7D310047EE0A /* URLRequest+Extensions.swift */,
+				CE8E34702BAB7EDB0047EE0A /* Data+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE8E346E2BAB7E6B0047EE0A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E346F2BAB7E830047EE0A /* Helpers */,
+				CE8E34682BAB7E050047EE0A /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE8E346F2BAB7E830047EE0A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E346A2BAB7E3D0047EE0A /* Logger.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE8E34722BAB829C0047EE0A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34902BAB8E460047EE0A /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CE8E34732BAB82BD0047EE0A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34812BAB87EB0047EE0A /* Entities */,
+				CE8E34862BAB895F0047EE0A /* Repositories */,
+				CE8E34802BAB872B0047EE0A /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CE8E34742BAB82FB0047EE0A /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34752BAB83340047EE0A /* Coordinator.swift */,
+				CE8E34772BAB835D0047EE0A /* HomeCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		CE8E347A2BAB843F0047EE0A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		CE8E347B2BAB84720047EE0A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E348B2BAB8B490047EE0A /* RecipeRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE8E347C2BAB849E0047EE0A /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E347E2BAB85F60047EE0A /* RecipeEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		CE8E34802BAB872B0047EE0A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34892BAB89D20047EE0A /* GetRecipesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CE8E34812BAB87EB0047EE0A /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E348E2BAB8C600047EE0A /* RecipeEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CE8E34862BAB895F0047EE0A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34872BAB89820047EE0A /* RecipeRepositoryProtocol.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE8E348D2BAB8C350047EE0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34822BAB88110047EE0A /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE8E34902BAB8E460047EE0A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34912BAB8E5D0047EE0A /* HomeViewController.swift */,
+				CE8E34932BAB8F8E0047EE0A /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +431,6 @@
 			files = (
 				CE8E34332BAB76830047EE0A /* LaunchScreen.storyboard in Resources */,
 				CE8E34302BAB76830047EE0A /* Assets.xcassets in Resources */,
-				CE8E342E2BAB76800047EE0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +455,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8E342B2BAB76800047EE0A /* ViewController.swift in Sources */,
+				CE8E347F2BAB85F60047EE0A /* RecipeEndpoint.swift in Sources */,
+				CE8E346D2BAB7E560047EE0A /* NetworkLogger.swift in Sources */,
+				CE8E345D2BAB7ABF0047EE0A /* HTTPMethod.swift in Sources */,
+				CE8E348A2BAB89D20047EE0A /* GetRecipesUseCase.swift in Sources */,
+				CE8E345B2BAB7A710047EE0A /* EndpointConvertible.swift in Sources */,
 				CE8E34272BAB76800047EE0A /* AppDelegate.swift in Sources */,
+				CE8E34632BAB7D310047EE0A /* URLRequest+Extensions.swift in Sources */,
+				CE8E34962BAB908A0047EE0A /* Environment.swift in Sources */,
+				CE8E346B2BAB7E3D0047EE0A /* Logger.swift in Sources */,
 				CE8E34292BAB76800047EE0A /* SceneDelegate.swift in Sources */,
+				CE8E34652BAB7D6C0047EE0A /* Network.swift in Sources */,
+				CE8E34882BAB89820047EE0A /* RecipeRepositoryProtocol.swift in Sources */,
+				CE8E34832BAB88110047EE0A /* Recipe.swift in Sources */,
+				CE8E34782BAB835D0047EE0A /* HomeCoordinator.swift in Sources */,
+				CE8E348C2BAB8B490047EE0A /* RecipeRepository.swift in Sources */,
+				CE8E348F2BAB8C600047EE0A /* RecipeEntity.swift in Sources */,
+				CE8E34922BAB8E5D0047EE0A /* HomeViewController.swift in Sources */,
+				CE8E34942BAB8F8E0047EE0A /* HomeViewModel.swift in Sources */,
+				CE8E34762BAB83340047EE0A /* Coordinator.swift in Sources */,
+				CE8E34712BAB7EDB0047EE0A /* Data+Extensions.swift in Sources */,
+				CE8E345F2BAB7B1E0047EE0A /* NetworkError.swift in Sources */,
+				CE8E34672BAB7DBA0047EE0A /* HttpStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +513,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE8E342C2BAB76800047EE0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE8E342D2BAB76800047EE0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE8E34312BAB76830047EE0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +655,6 @@
 				INFOPLIST_FILE = TheDBAAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +682,6 @@
 				INFOPLIST_FILE = TheDBAAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
