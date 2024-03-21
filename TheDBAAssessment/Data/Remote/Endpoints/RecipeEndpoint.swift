@@ -8,12 +8,11 @@
 import Foundation
 
 enum RecipeEndpoint {
-    case terms
-    case matches
+    case recipes
 }
 
 extension RecipeEndpoint: EndpointConvertible {
-    private var basePath: String { "/recipes" }
+    private var basePath: String { "/android-test" }
     
     var shouldAuthorized: Bool {
         false
@@ -21,16 +20,14 @@ extension RecipeEndpoint: EndpointConvertible {
     
     var path: String {
         switch self {
-        case .terms:
-            return basePath
-        case .matches:
-            return "\(basePath)/matches"
+        case .recipes:
+            return "\(basePath)/recipes.json"
         }
     }
 
     var httpMethod: HTTPMethod {
         switch self {
-        case .terms, .matches:
+        case .recipes:
             return .get
         }
     }

@@ -7,11 +7,66 @@
 
 import Foundation
 import Combine
+import CoreData
 
 struct RecipeRepository: RecipeRepositoryProtocol {
+    private let network = Network<[Recipe]>()
+    private let storage = StorageCRUD<CdRecipe>()
+    
     func fetchRecipes() -> AnyPublisher<[RecipeEntity], Error> {
-        Network<[Recipe]>().request(RecipeEndpoint.matches)
+        Publishers.Concatenate(
+            prefix: loadLocalRecipes()
+                .catch { _ -> AnyPublisher<[RecipeEntity], Error> in
+                    // Ignore error from loading local recipes
+                    Result.Publisher(.success([])).eraseToAnyPublisher()
+                },
+            suffix: loadRemoteRecipes()
+                .handleEvents(receiveOutput: {
+                    cacheRecipes(recipes: $0)
+                })
+        )
+        .eraseToAnyPublisher()
+    }
+    
+    func fetchRecipe(by id: String) -> AnyPublisher<RecipeEntity?, Error> {
+        let context = storage.context
+        return Deferred { [context] in
+            Future { promise in
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: CdRecipe.entity().name!)
+                let predicate = NSPredicate(format: "id = %@", argumentArray: [id])
+                fetchRequest.predicate = predicate
+                do {
+                    let result = try context.fetch(fetchRequest)
+                    guard let cdRecipe = (result as? [CdRecipe])?.first else {
+                        promise(.success(nil))
+                        return
+                    }
+                    promise(.success(cdRecipe.asEntity))
+                } catch {
+                    promise(.failure(CoreDataStorageError.readError(error)))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    private func loadLocalRecipes() -> AnyPublisher<[RecipeEntity], Error> {
+        storage.fetchAllEntities()
+            .map { $0.sorted{ $0.index < $1.index }.compactMap { $0.asEntity } }
+            .eraseToAnyPublisher()
+    }
+    
+    private func loadRemoteRecipes() -> AnyPublisher<[RecipeEntity], Error> {
+        network.request(RecipeEndpoint.recipes)
             .map { $0.map { $0.asEntity } }
             .eraseToAnyPublisher()
+    }
+    
+    private func cacheRecipes(recipes: [RecipeEntity]) {
+        storage.deleteAllEntities()
+        let entities = recipes.enumerated().map { index, recipe in
+            recipe.toCoreData(context: storage.context, index: index)
+        }
+        storage.cacheEntities(entities: entities)
     }
 }

@@ -10,4 +10,5 @@ import Combine
 
 protocol RecipeRepositoryProtocol {
     func fetchRecipes() -> AnyPublisher<[RecipeEntity], Error>
+    func fetchRecipe(by id: String) -> AnyPublisher<RecipeEntity?, Error>
 }

@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  RecipeDetailsViewModel.swift
 //  TheDBAAssessment
 //
 //  Created by HungNguyen on 2024/03/21.
@@ -8,28 +8,26 @@
 import Foundation
 import Combine
 
-final class HomeViewModel: BaseViewModel {
-    
-    // MARK: - Coordinator
-    
-    var onOpenRecipeDetails: ((String) -> Void)?
+final class RecipeDetailsViewModel: BaseViewModel {
     
     // MARK: - Properties
     
-    private let getRecipesUseCase: GetRecipesUseCaseProtocol
-    @Published private(set) var recipes: [RecipeEntity] = []
-
+    private let getRecipeByIdUseCase: GetRecipeByIdUseCaseProtocol
+    private let recipeId: String
+    @Published private(set) var recipe: RecipeEntity?
+    
     // MARK: - Initializer
     
-    init(getRecipesUseCase: GetRecipesUseCaseProtocol) {
-        self.getRecipesUseCase = getRecipesUseCase
+    init(getRecipeByIdUseCase: GetRecipeByIdUseCaseProtocol, recipeId: String) {
+        self.getRecipeByIdUseCase = getRecipeByIdUseCase
+        self.recipeId = recipeId
     }
-    
+
     // MARK: - Actions
     
-    func getRecipes() {
+    func getRecipeDetails() {
         isLoading = true
-        getRecipesUseCase.execute()
+        getRecipeByIdUseCase.execute(id: recipeId)
             .sink(
                 receiveCompletion: { [weak self] completion in
                     guard let self else { return }
@@ -38,8 +36,8 @@ final class HomeViewModel: BaseViewModel {
                     }
                     isLoading = false
                 },
-                receiveValue: { [weak self] recipes in
-                    self?.recipes = recipes
+                receiveValue: { [weak self] recipe in
+                    self?.recipe = recipe
                 }
             )
             .store(in: &cancellables)

@@ -22,5 +22,4 @@ struct GetRecipesUseCase: GetRecipesUseCaseProtocol {
     func execute() -> AnyPublisher<[RecipeEntity], Error> {
         recipesRepository.fetchRecipes()
     }
-
 }
