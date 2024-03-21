@@ -1,4 +1,4 @@
-# Th Digital BA Take Home Assessment
+# The Take Home Assessment
 
 Home screen                |  Recipe Details screen
 :-------------------------:|:-------------------------:
