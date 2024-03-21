@@ -20,6 +20,17 @@ struct GetRecipesUseCase: GetRecipesUseCaseProtocol {
     }
 
     func execute() -> AnyPublisher<[RecipeEntity], Error> {
-        recipesRepository.fetchRecipes()
+        Publishers.Concatenate(
+            prefix: recipesRepository.loadLocalRecipes()
+                .catch { _ -> AnyPublisher<[RecipeEntity], Error> in
+                    // Ignore error from loading local recipes
+                    Result.Publisher(.success([])).eraseToAnyPublisher()
+                },
+            suffix: recipesRepository.loadRemoteRecipes()
+                .handleEvents(receiveOutput: {
+                    recipesRepository.cacheRecipes(recipes: $0)
+                })
+        )
+        .eraseToAnyPublisher()
     }
 }

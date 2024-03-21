@@ -11,7 +11,6 @@
 		CE8E34292BAB76800047EE0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34282BAB76800047EE0A /* SceneDelegate.swift */; };
 		CE8E34302BAB76830047EE0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8E342F2BAB76830047EE0A /* Assets.xcassets */; };
 		CE8E34332BAB76830047EE0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8E34312BAB76830047EE0A /* LaunchScreen.storyboard */; };
-		CE8E343E2BAB76840047EE0A /* TheDBAAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E343D2BAB76840047EE0A /* TheDBAAssessmentTests.swift */; };
 		CE8E34482BAB76840047EE0A /* TheDBAAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34472BAB76840047EE0A /* TheDBAAssessmentUITests.swift */; };
 		CE8E344A2BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34492BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift */; };
 		CE8E345B2BAB7A710047EE0A /* EndpointConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E345A2BAB7A710047EE0A /* EndpointConvertible.swift */; };
@@ -53,6 +52,10 @@
 		CE8E34BE2BAC27C50047EE0A /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34BD2BAC27C50047EE0A /* RecipeDetailsViewController.swift */; };
 		CE8E34C02BAC27D50047EE0A /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34BF2BAC27D50047EE0A /* RecipeDetailsViewModel.swift */; };
 		CE8E34C22BAC38300047EE0A /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34C12BAC38300047EE0A /* UIButton+Extensions.swift */; };
+		CE8E34C52BAC7D9B0047EE0A /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34C42BAC7D9B0047EE0A /* MockError.swift */; };
+		CE8E34C72BAC7DC50047EE0A /* XCTestCase+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34C62BAC7DC50047EE0A /* XCTestCase+Combine.swift */; };
+		CE8E34CC2BAC7E520047EE0A /* GetRecipesUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34CB2BAC7E520047EE0A /* GetRecipesUseCaseTest.swift */; };
+		CE8E34CF2BAC7F460047EE0A /* RecipeRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8E34CE2BAC7F460047EE0A /* RecipeRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +83,6 @@
 		CE8E34322BAB76830047EE0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8E34342BAB76830047EE0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8E34392BAB76830047EE0A /* TheDBAAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDBAAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE8E343D2BAB76840047EE0A /* TheDBAAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDBAAssessmentTests.swift; sourceTree = "<group>"; };
 		CE8E34432BAB76840047EE0A /* TheDBAAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheDBAAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8E34472BAB76840047EE0A /* TheDBAAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDBAAssessmentUITests.swift; sourceTree = "<group>"; };
 		CE8E34492BAB76840047EE0A /* TheDBAAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheDBAAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -123,6 +125,10 @@
 		CE8E34BD2BAC27C50047EE0A /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		CE8E34BF2BAC27D50047EE0A /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		CE8E34C12BAC38300047EE0A /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		CE8E34C42BAC7D9B0047EE0A /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		CE8E34C62BAC7DC50047EE0A /* XCTestCase+Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Combine.swift"; sourceTree = "<group>"; };
+		CE8E34CB2BAC7E520047EE0A /* GetRecipesUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRecipesUseCaseTest.swift; sourceTree = "<group>"; };
+		CE8E34CE2BAC7F460047EE0A /* RecipeRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +193,9 @@
 		CE8E343C2BAB76830047EE0A /* TheDBAAssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE8E343D2BAB76840047EE0A /* TheDBAAssessmentTests.swift */,
+				CE8E34CD2BAC7EF40047EE0A /* Mocks */,
+				CE8E34C82BAC7DEA0047EE0A /* UseCases */,
+				CE8E34C32BAC7D800047EE0A /* Helpers */,
 			);
 			path = TheDBAAssessmentTests;
 			sourceTree = "<group>";
@@ -422,6 +430,31 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		CE8E34C32BAC7D800047EE0A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34C62BAC7DC50047EE0A /* XCTestCase+Combine.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CE8E34C82BAC7DEA0047EE0A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34CB2BAC7E520047EE0A /* GetRecipesUseCaseTest.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CE8E34CD2BAC7EF40047EE0A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CE8E34C42BAC7D9B0047EE0A /* MockError.swift */,
+				CE8E34CE2BAC7F460047EE0A /* RecipeRepositoryMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -600,7 +633,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8E343E2BAB76840047EE0A /* TheDBAAssessmentTests.swift in Sources */,
+				CE8E34C52BAC7D9B0047EE0A /* MockError.swift in Sources */,
+				CE8E34CC2BAC7E520047EE0A /* GetRecipesUseCaseTest.swift in Sources */,
+				CE8E34C72BAC7DC50047EE0A /* XCTestCase+Combine.swift in Sources */,
+				CE8E34CF2BAC7F460047EE0A /* RecipeRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,6 @@ struct GetRecipeByIdUseCase: GetRecipeByIdUseCaseProtocol {
     }
 
     func execute(id: String) -> AnyPublisher<RecipeEntity?, Error> {
-        recipesRepository.fetchRecipe(by: id)
+        recipesRepository.loadLocalRecipe(by: id)
     }
 }

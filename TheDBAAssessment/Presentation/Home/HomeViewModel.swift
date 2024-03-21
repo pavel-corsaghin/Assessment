@@ -36,10 +36,11 @@ final class HomeViewModel: BaseViewModel {
                     if case .failure(let error) = completion {
                         self.error = error
                     }
-                    isLoading = false
                 },
-                receiveValue: { [weak self] recipes in
-                    self?.recipes = recipes
+                receiveValue: { [weak self] in
+                    guard let self else { return }
+                    isLoading = false
+                    recipes = $0
                 }
             )
             .store(in: &cancellables)

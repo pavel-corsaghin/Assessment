@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 protocol RecipeRepositoryProtocol {
-    func fetchRecipes() -> AnyPublisher<[RecipeEntity], Error>
-    func fetchRecipe(by id: String) -> AnyPublisher<RecipeEntity?, Error>
+    func loadLocalRecipes() -> AnyPublisher<[RecipeEntity], Error>
+    func loadRemoteRecipes() -> AnyPublisher<[RecipeEntity], Error>
+    func cacheRecipes(recipes: [RecipeEntity])
+    func loadLocalRecipe(by id: String) -> AnyPublisher<RecipeEntity?, Error>
 }
